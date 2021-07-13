@@ -9,6 +9,18 @@ These scripts are built with some basic logging that will display as they are ru
 
 All removal commands are made such that files in-use will not be removed and the user will **not** be prompted as such for any skip or y/n prompts. The scripts also take into account if the directories exists or not and will skip directories they cannot find. 
 
+## Usage
+
+### Run Directly
+
+The simplest way to use these scripts is to either right-click and select 'Run as Adminstrator', or create a Shortcut to the script and configure the shortcut to run the script as an Adminstrator. 
+
+### Scheduled Task
+
+Another way to run these scripts would be to use the [Task Scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/using-the-task-scheduler) in Windows to run the script(s) at a specific time, weekly, when you log on, and a few other options.  
+
+## Scripts
+
 ### Delete_Cache_Files.bat
 This script removes files from three directories. 
 
