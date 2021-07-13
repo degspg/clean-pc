@@ -7,16 +7,16 @@ For example, if your default drive letter is `X:\` instead of `C:\` there's no n
 
 These scripts are built with some basic logging that will display as they are running. When the script completes it will prompt the user to press any key to close the command prompt window. This is to allow for viewing of that logging to insure all desired files and folders were cleaned. 
 
-All removal commands are made such that files in-use will not be removed and the user will *not* be prompted as such for any skip or y/n prompts.  
+All removal commands are made such that files in-use will not be removed and the user will **not** be prompted as such for any skip or y/n prompts. The scripts also take into account if the directories exists or not and will skip directories they cannot find. 
 
 ### Delete_Cache_Files.bat
-This script removes files from three directories and the directories themselves. 
+This script removes files from three directories. 
 
-- *`%PROGRAMDATA%\NVIDIA Corporation\NV_Cache`* (Typically, "C:\ProgramData\NVIDIA Corporation\NV_Cache")
+- **`%PROGRAMDATA%\NVIDIA Corporation\NV_Cache`** (Typically, "C:\ProgramData\NVIDIA Corporation\NV_Cache")
     - Nividia cache files that are _supposed_ to help with FPS in games and overall performance, but files cluttering this folder have been reported to cause stuttering and other undesireable side-effects in-game. For examples simple Google "NV_Cache". 
-- *`%LOCALAPPDATA%\NVIDIA\GLCache`* (Typically, "C:\Users\\<username\>\AppData\Local\NVIDIA\GLCache")
+- **`%LOCALAPPDATA%\NVIDIA\GLCache`** (Typically, "C:\Users\\<username\>\AppData\Local\NVIDIA\GLCache")
     - OpenGL shader cache files. 
-- *`%LOCALAPPDATA%\D3DSCache`* (Typically, "C:\Users\\<username\>\AppData\Local\D3DSCache") 
+- **`%LOCALAPPDATA%\D3DSCache`** (Typically, "C:\Users\\<username\>\AppData\Local\D3DSCache") 
     - > D3DSCache is a folder that contains cached information for Microsoft's Direct3D API.
       > 
       > This is part of DirectX, which is used for graphics display in games and other intensive software. 
@@ -28,11 +28,11 @@ This script removes files from three directories and the directories themselves.
 ### Delete_Temp_Files.bat
 This script removes temp files from a few Windows directories. 
 
-- *`%TEMP%`* (Typically, "C:\Users\\<username\>\AppData\Local\Temp")
+- **`%TEMP%`** (Typically, "C:\Users\\<username\>\AppData\Local\Temp")
 	- These files are typically created by processes to store data while the process is alive but are often cleaned out when the process ends. These files can also be useful for recovering things in applications that might have crashed previously. That being said, this folder can grow over time and in some cases cause latency for processes accessing this folder to store things. In the end these files are all "temp" files and aren't expected to live long and can be deleted with minimal or no impact to the user. 
-- *`%WINDIR%\Temp`* (Typically, "C:\Windows\Temp") 
+- **`%WINDIR%\Temp`** (Typically, "C:\Windows\Temp") 
     - This directory is similar to the `%TEMP%` directory in it's purpose and provided that all other applications are closed it is safe to attempt to delete all files and folders within, aside from those in-use. 
-- *`%WINDIR%\SoftwareDistribution\Download`* (Typically, "C:\Windows\SoftwareDistribution\Download")
+- **`%WINDIR%\SoftwareDistribution\Download`** (Typically, "C:\Windows\SoftwareDistribution\Download")
 	- > The Software Distribution folder is a vital component for Windows Update, which temporarily stores files needed to install new updates. It's safe to clear the content of the said folder because Windows 10 will always re-download and re-created all the necessary file and components, if removed.
 	  >
 	  > [John DeV (Microsoft Independent Advisor)](https://answers.microsoft.com/en-us/windows/forum/windows_10-files/cwindowssoftwaredistributiondownload-deleting/7121844b-82bb-4a53-ad52-3a93fcfc9ffb)
