@@ -22,7 +22,7 @@ Another way to run these scripts would be to use the [Task Scheduler](https://do
 ## Scripts
 
 ### Delete_Cache_Files.bat
-This script removes files from three directories. 
+This script removes cache files from three directories: 
 
 - **`%PROGRAMDATA%\NVIDIA Corporation\NV_Cache`** (Typically, "C:\ProgramData\NVIDIA Corporation\NV_Cache")
     - Nividia cache files that are _supposed_ to help with FPS in games and overall performance, but files cluttering this folder have been reported to cause stuttering and other undesireable side-effects in-game. For examples simple Google "NV_Cache". 
@@ -38,13 +38,14 @@ This script removes files from three directories.
       > -- [Ben Stegner from makeuseof.com](https://www.makeuseof.com/tag/default-windows-files-folders/)
 
 ### Delete_Temp_Files.bat
-This script removes temp files from a few Windows directories. 
+This script removes temp files from a few Windows directories: 
 
 - **`%TEMP%`** (Typically, "C:\Users\\<username\>\AppData\Local\Temp")
 	- These files are typically created by processes to store data while the process is alive and are often cleaned out when the process ends, but not always. These files can also be useful for recovering things in applications. That being said, this folder can grow over time and in some cases cause latency. In the end these files are all "temp" files and aren't expected to live long and can be deleted with minimal or no impact to the user. 
 - **`%WINDIR%\Temp`** (Typically, "C:\Windows\Temp") 
     - This directory is similar to the `%TEMP%` directory in it's purpose and provided that all other applications are closed it is safe to attempt to delete all files and folders within, aside from those in-use. 
 - **`%WINDIR%\SoftwareDistribution\Download`** (Typically, "C:\Windows\SoftwareDistribution\Download")
-	- > The Software Distribution folder is a vital component for Windows Update, which temporarily stores files needed to install new updates. It's safe to clear the content of the said folder because Windows 10 will always re-download and re-created all the necessary file and components, if removed.
+	- > The Software Distribution folder is a vital component for Windows Update, which temporarily stores files needed to install new updates. 
+	  > It's safe to clear the content of the said folder because Windows 10 will always re-download and re-created all the necessary file and components, if removed.
 	  >
 	  > [John DeV (Microsoft Independent Advisor)](https://answers.microsoft.com/en-us/windows/forum/windows_10-files/cwindowssoftwaredistributiondownload-deleting/7121844b-82bb-4a53-ad52-3a93fcfc9ffb)
