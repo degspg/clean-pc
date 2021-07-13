@@ -29,7 +29,7 @@ This script removes files from three directories.
 This script removes temp files from a few Windows directories. 
 
 - **`%TEMP%`** (Typically, "C:\Users\\<username\>\AppData\Local\Temp")
-	- These files are typically created by processes to store data while the process is alive but are often cleaned out when the process ends. These files can also be useful for recovering things in applications that might have crashed previously. That being said, this folder can grow over time and in some cases cause latency for processes accessing this folder to store things. In the end these files are all "temp" files and aren't expected to live long and can be deleted with minimal or no impact to the user. 
+	- These files are typically created by processes to store data while the process is alive and are often cleaned out when the process ends, but not always. These files can also be useful for recovering things in applications. That being said, this folder can grow over time and in some cases cause latency. In the end these files are all "temp" files and aren't expected to live long and can be deleted with minimal or no impact to the user. 
 - **`%WINDIR%\Temp`** (Typically, "C:\Windows\Temp") 
     - This directory is similar to the `%TEMP%` directory in it's purpose and provided that all other applications are closed it is safe to attempt to delete all files and folders within, aside from those in-use. 
 - **`%WINDIR%\SoftwareDistribution\Download`** (Typically, "C:\Windows\SoftwareDistribution\Download")
